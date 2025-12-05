@@ -5,18 +5,19 @@ const projectsData = [
         description: 'Personal ATS Assistant using Google GEN-AI framework with GEMINI-1.5 FLASH Model API',
         languages: { Python: 100 },
         imageUrl: 'assets/images/placeholder.png',
-        link:''
+        githubUrl: 'https://github.com/Sreekanth-AIE/Personal_ATS_Assistant'
     },
     {
         name: 'Knowing_Soil',
         description: 'a simple soil classification model that is structured as modular, scalable production-ready code',
         languages: { Jupyter_Notebook: 61.2, Python: 38.8 },
-        imageUrl: 'assets/images/placeholder.png'
+        imageUrl: 'assets/images/placeholder.png',
+        githubUrl: 'https://github.com/Sreekanth-AIE/Knowing_Soil'
     },
 ];
 
 // Fetch projects from static JSON object
-async function fetchProjects() {
+function fetchProjects() {
     try {
         document.getElementById('loading').style.display = 'none';
         
@@ -49,15 +50,15 @@ function createProjectCard(repo, delay) {
        <div class="project-card">
                             <img src="${repo.imageUrl}" alt="${repo.name}" class="project-image">
                             <div class="p-4">
-                                <h3 class="h5 mb-3">${repo.name}</h3>
-                                <p class="text-light mb-3">${repo.description || 'No description available'}</p>
+                                <h3 class="h5 mb-3" style="color: var(--accent-color);">${repo.name}</h3>
+                                <p class="mb-3" style="color: var(--foreground-color);">${repo.description || 'No description available'}</p>
                                 <div class="mb-3">
                                     ${languagesHtml}
                                 </div>
                                 <div class="d-flex gap-2">
                                     ${repo.homepage ? 
                                         `<a href="${repo.homepage}" class="project-link" target="_blank">Live Demo</a>` : ''}
-                                    <a href="${repo.imageUrl}" class="project-link" target="_blank">GitHub</a>
+                                    <a href="${repo.githubUrl}" class="project-link" target="_blank">GitHub</a>
                                 </div>
                             </div>
                         </div>

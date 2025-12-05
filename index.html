@@ -13,14 +13,10 @@
     
     
     <!-- Animation and scrolling effects -->
-    <link href="./assets/css/animate.min.css" rel="stylesheet" />
     <link href="./assets/vendor/aos/aos.css" rel="stylesheet" />
     
     <!-- main style -->
     <link href="./assets/css/style.css" rel="stylesheet" />
-    
-    <!-- d3 -->
-    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/7.8.5/d3.min.js"></script> -->
    
 </head>
 <body>
@@ -53,13 +49,11 @@
                             <a class="nav-link" href="#projects">Projects</a>
                         </li>
                         <li class="nav-item">
+                            <a class="nav-link" href="blogs/index.html">Blogs</a>
+                        </li>
+                        <li class="nav-item">
                             <a class="nav-link" href="#contact">Contact</a>
                         </li>
-                        <!-- <li class="nav-item">
-                            <figure class="max-w-8rem mx-auto">
-                                <img class="img-fluid" src="../assets/svg/icons/icon-25.svg" alt="SVG">
-                            </figure>
-                        </li> -->
                     </ul>
                 </div>
             </div>
@@ -106,23 +100,23 @@
             </div>
          
             <div class="col-12 col-lg-7 d-flex align-items-center justify-content-center image-section" data-aos="fade-left" data-aos-delay="300">
-                <img src="assets/images/solar-system-ai-visual.svg" alt="AI Solar System" class="hero-image">
+                <img src="assets/images/solar-system-ai-visual-color-filled.svg" alt="AI Solar System" class="hero-image">
             </div>
         </div>
     </div>
 </section>
 
     <!-- About Section -->
-    <section class="about-section" id="about">
-        <div class="container py-5 justify-content-center">
+    <section class="about-section py-5" id="about">
+        <div class="container">
             <div class="row">
                 <div class="col-12">
-                    <h2 class="about-heading">About Me</h2>
+                    <h2 class="section-heading mb-4" data-aos="fade-down">About Me</h2>
                 </div>
             </div>
             <div class="row">
                 <div class="col-12">
-                    <div class="about-text">
+                    <div class="about-text" data-aos="fade-up">
                         <p>
                             Hello! I'm <span>Sreekanth T</span>, a passionate <span>Data Scientist and Machine Learning Engineer</span> 
                             with a keen interest in transforming complex data into actionable insights. 
@@ -135,11 +129,11 @@
             </div>
             <div class="row">
                 <div class="col-12">
-                    <h3 class="interests-heading">Apart from Work</h3>
+                    <h3 class="section-subheading mb-4 mt-5" data-aos="fade-down">Apart from Work</h3>
                 </div>
             </div>
             <div class="row">
-                <div class="col-md-4 col-sm-12 mb-4">
+                <div class="col-md-4 col-sm-12 mb-4" data-aos="fade-up" data-aos-delay="100">
                     <div class="card interest-card h-100">
                         <div class="interest-card-body">
                             <img src="assets/images/telescope-svgrepo-com.svg" alt="Research" class="interest-icon mx-auto d-block">
@@ -152,7 +146,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-md-4 col-sm-12 mb-4">
+                <div class="col-md-4 col-sm-12 mb-4" data-aos="fade-up" data-aos-delay="200">
                     <div class="card interest-card h-100">
                         <div class="interest-card-body">
                             <img src="assets/images/gaming-pad-02-svgrepo-com.svg" alt="Gaming" class="interest-icon mx-auto d-block">
@@ -164,7 +158,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-md-4 col-sm-12 mb-4">
+                <div class="col-md-4 col-sm-12 mb-4" data-aos="fade-up" data-aos-delay="300">
                     <div class="card interest-card h-100">
                         <div class="interest-card-body">
                             <img src="assets/images/reading-student-svgrepo-com.svg" alt="Reading" class="interest-icon mx-auto d-block">
@@ -183,12 +177,12 @@
     
 
     <!-- Timeline Section -->
-    <section id="timeline">
-        <div class="timeline-body container-fluid d-flex">
-            <div class="timeline-body-heading">My Professional Journey</div>
+    <section id="timeline" class="py-5">
+        <div class="timeline-body container-fluid d-flex flex-column">
+            <h2 class="section-heading text-center mb-5" data-aos="fade-down">My Professional Journey</h2>
             <div class="timeline-container">
                 <div class="timeline">
-                    <div class="timeline-item">
+                    <div class="timeline-item" data-aos="fade-right" data-aos-delay="100">
                         <div class="content">
                             <div class="date">Mar 2024 - Present</div>
                             <div class="title">ML and AI Engineer</div>
@@ -196,7 +190,7 @@
                                 Currently supporting a budding Startup, architecting scalable solutions, and driving technical innovation.</div>
                         </div>
                     </div>
-                    <div class="timeline-item">
+                    <div class="timeline-item" data-aos="fade-left" data-aos-delay="100">
                         <div class="content">
                             <div class="date">Jan 2020 - Sep 2023</div>
                             <div class="title">ML Engineer</div>
@@ -204,7 +198,7 @@
                                 Started as "Data Scientist" and promoted as "ML Engineer". Mentored Interns about "AI".</div>
                         </div>
                     </div>
-                    <div class="timeline-item">
+                    <div class="timeline-item" data-aos="fade-right" data-aos-delay="100">
                         <div class="content">
                             <div class="date">July 2019 - Dec 2019</div>
                             <div class="title">IoT Intern</div>
@@ -212,7 +206,7 @@
                                 Developed and maintained IoT Projects. Collaborated with cross-functional teams.</div>
                         </div>
                     </div>
-                    <div class="timeline-item">
+                    <div class="timeline-item" data-aos="fade-left" data-aos-delay="100">
                         <div class="content">
                             <div class="date">May 2015 - May 2019</div>
                             <div class="title">B.Tech in Electronics and Communication</div>
@@ -227,17 +221,17 @@
 
 
     <!-- Skills Section -->
-    <section id="skills">
+    <section id="skills" class="py-5">
         <div class="skills-map">
-            <div class="skills-heading">Technical Expertise</div>
+            <h2 class="section-heading text-center mb-5" data-aos="fade-down">Technical Expertise</h2>
             <div class="skills-container" id="skills-container"></div>
         </div>
     </section>
     
     <!-- Projects Section -->
-    <section id="projects">
-        <div class="container py-5">
-            <h2 class="text-center mb-5" data-aos="fade-down">My GitHub Projects</h2>
+    <section id="projects" class="py-5">
+        <div class="container">
+            <h2 class="section-heading text-center mb-5" data-aos="fade-down">My GitHub Projects</h2>
             
             <!-- Loading Spinner -->
             <div id="loading" class="text-center">
@@ -254,21 +248,19 @@
     </section>
 
     <!-- Contact Section -->
-    <section class="contact-section" id="contact">
-        <div class="container contact_info">
-            <p id="END_Heading"><span>End of The Ride!</span></p>
+    <section class="contact-section py-5" id="contact">
+        <div class="container text-center" data-aos="fade-up" data-aos-offset="200">
+            <h2 class="section-heading mb-4"><span>End of The Ride!</span></h2>
             <p>WOW! You made it through the <span>cosmos</span> 🌌 of my experience!. I really appreciate you taking the <span>time to explore</span> my work.</p>
             <p>✨ I hope you <span>found</span> something that <span>sparked your interest.</span> ✨</p>
             <p>If you think my skills <span>align</span> with your mission, or if you just want to discuss <span>a potential project</span>, I'd be <span>thrilled</span> to connect.</p>
             <p>Let's launch 🚀 a conversation! 📡</p>
         
-            <a id="contact_links" href="mailto:sreekanth.aie.p@gmail.com?subject=Hello&body=lets start a conversation"><span>📧 Send Email</span></a>
-            or
-            <a id="contact_links" href="https://www.linkedin.com/in/yourprofile"><span>🔗 LinkedIn</span></a>
-            <br>
-            or
-            <br>
-            <a id="contact_links" href="https://wa.me/9494970901?text=Hello%20there!">
+            <a class="contact-link d-inline-block mx-2 my-2" href="mailto:xxxxxxxxx@gmail.com?subject=Hello&body=lets start a conversation"><span>📧 Send Email</span></a>
+            <span class="mx-1">or</span>
+            <a class="contact-link d-inline-block mx-2 my-2" href="https://www.linkedin.com/in/yourprofile"><span>🔗 LinkedIn</span></a>
+            <span class="mx-1">or</span>
+            <a class="contact-link d-inline-block mx-2 my-2" href="https://wa.me/9xxxxxxxxxx?text=Hello%20there!">
                 <span>
                     <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px"
                         width="1em" height="1em" viewBox="0 0 48 48">
@@ -300,11 +292,11 @@
                             clip-rule="evenodd"></path>
                     </svg> Chat on WhatsApp 
                 </span>
-            </a>  or 
-            <a id="contact_links" href="tel:9494970901"><span> ☎️ 91+ 9494970901</span></a>
-            </ul>
-            </div>
-            </section>
+            </a>
+            <span class="mx-1">or</span>
+            <a class="contact-link d-inline-block mx-2 my-2" href="tel:9xxxxxxxxx"><span> ☎️ 91+ 9xxxxxxxx</span></a>
+        </div>
+    </section>
 
    
 
@@ -361,6 +353,7 @@
     <script src="./assets/js/script.js"></script>
     <script src="./assets/js/skills.js"></script>
     <script src="./assets/js/projects.js"></script>
+    <script src="./assets/js/theme-switcher.js"></script>
 
     
 </body>

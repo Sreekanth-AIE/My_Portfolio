@@ -15,7 +15,6 @@ const skillsData = [
             { name: "TensorFlow / Keras", icon: "Network" },
             { name: "PyTorch", icon: "Network" },
             { name: "scikit-learn", icon: "Network" },
-            { name: "whisper", icon: "Network" },
             { name: "pyannote", icon: "Network" }
         ]
     },
@@ -117,6 +116,8 @@ skillsData.forEach((category, index) => {
     const categoryEl = document.createElement('div');
     categoryEl.className = 'skill-category';
     categoryEl.style.animationDelay = `${index * 0.1}s`;
+    categoryEl.setAttribute('data-aos', 'fade-up');
+    categoryEl.setAttribute('data-aos-delay', `${100}`);
 
     categoryEl.innerHTML = `
         <div class="category-header">
@@ -136,6 +137,7 @@ skillsData.forEach((category, index) => {
     `;
 
     container.appendChild(categoryEl);
+    lucide.createIcons(); // Initialize Lucide icons after injecting HTML
 });
 
 // Initialize Lucide icons

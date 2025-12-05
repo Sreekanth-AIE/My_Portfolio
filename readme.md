@@ -58,11 +58,13 @@ You can view the live demo of the portfolio [here](https://sreekanth-aie.github.
 ## Setup
 
 1. Clone the repository:
+
     ```sh
     git clone https://github.com/sreekanth-aie/My_Portfolio.git
     ```
 
 2. Navigate to the project directory:
+
     ```sh
     cd My_Portfolio
     ```

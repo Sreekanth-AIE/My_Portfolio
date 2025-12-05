@@ -68,36 +68,11 @@ class TypeWriter {
 }
 
 
-// // Header scroll behavior
-// let lastScroll = 0;
-// const header = document.querySelector('.header');
-
-// window.addEventListener('scroll', () => {
-//     const currentScroll = window.pageYOffset;
-    
-//     if (currentScroll <= 0) {
-//         header.style.transform = 'translateY(0)';
-//         return;
-//     }
-    
-//     if (currentScroll > lastScroll && currentScroll > 50) {
-//         // Scrolling down
-//         header.style.transform = 'translateY(-100%)';
-//     } else {
-//         // Scrolling up
-//         header.style.transform = 'translateY(0)';
-//     }
-    
-//     lastScroll = currentScroll;
-// });
-
-
-
 // On DOMContentLoaded
 document.addEventListener('DOMContentLoaded', () => {
     AOS.init({
         duration: 1000,
-        once: true
+        once: false
     });
     //creating stars
     createStars();
@@ -107,19 +82,55 @@ document.addEventListener('DOMContentLoaded', () => {
     const words = ['A.I. Developer', 'M.L. Engineer', 'Data Scientist', 'IoT Developer'];
     new TypeWriter(textElement, words);
 
-    // Add click event listeners to all nav links
-    const navLinks = document.querySelectorAll('.nav-link');
+    // Add click event listeners to all nav links (for mobile menu collapse)
+    const navLinks = document.querySelectorAll('.navbar-nav .nav-link');
     const navbarCollapse = document.querySelector('.navbar-collapse');
-    const bsCollapse = new bootstrap.Collapse(navbarCollapse, {
-        toggle: false
-    });
 
     navLinks.forEach(link => {
         link.addEventListener('click', () => {
-            // Close the navbar if it's open
+            // Close the navbar if it's open (mobile view)
             if (navbarCollapse.classList.contains('show')) {
+                const bsCollapse = bootstrap.Collapse.getInstance(navbarCollapse) || new bootstrap.Collapse(navbarCollapse, { toggle: false });
                 bsCollapse.hide();
             }
         });
     });
+
+    // Scroll Spy - Highlight active menu item based on scroll position
+    const sections = document.querySelectorAll('section[id]');
+    
+    function scrollActive() {
+        const scrollY = window.pageYOffset;
+        const viewportCenter = scrollY + window.innerHeight / 2;
+        const docHeight = document.documentElement.scrollHeight;
+        const nearBottom = window.innerHeight + scrollY >= docHeight - 5;
+
+        sections.forEach(current => {
+            const sectionHeight = current.offsetHeight;
+            const sectionTop = current.offsetTop;
+            const sectionId = current.getAttribute('id');
+            const navLink = document.querySelector('.navbar-nav a[href*="' + sectionId + '"]');
+
+            if (!navLink) return;
+
+            let isActive = viewportCenter >= sectionTop && viewportCenter < sectionTop + sectionHeight;
+
+            // When very close to the bottom of the page, force Contact as active
+            if (nearBottom && sectionId === 'contact') {
+                isActive = true;
+            }
+
+            if (isActive) {
+                navLink.classList.add('active');
+            } else {
+                navLink.classList.remove('active');
+            }
+        });
+    }
+    
+    // Add scroll event listener
+    window.addEventListener('scroll', scrollActive);
+    
+    // Call once on load to set initial active state
+    scrollActive();
 });
