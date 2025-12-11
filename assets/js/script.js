@@ -102,7 +102,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     // Scroll Spy - Highlight active menu item based on scroll position
-    const sections = document.querySelectorAll('section[id']);
+    const sections = document.querySelectorAll('section[id]');
     
     function scrollActive() {
         const scrollY = window.pageYOffset;
