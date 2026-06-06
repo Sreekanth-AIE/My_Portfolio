@@ -87,7 +87,12 @@ document.addEventListener('DOMContentLoaded', () => {
     const navbarCollapse = document.querySelector('.navbar-collapse');
 
     navLinks.forEach(link => {
-        link.addEventListener('click', () => {
+        link.addEventListener('click', (e) => {
+            // Don't auto-collapse when clicking dropdown toggles (e.g., theme color picker)
+            if (link.dataset.bsToggle === 'dropdown') {
+                return;
+            }
+
             // Close the navbar if it's open (mobile view)
             if (navbarCollapse.classList.contains('show')) {
                 const bsCollapse = bootstrap.Collapse.getInstance(navbarCollapse) || new bootstrap.Collapse(navbarCollapse, { toggle: false });
