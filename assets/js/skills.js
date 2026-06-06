@@ -137,8 +137,6 @@ skillsData.forEach((category, index) => {
     `;
 
     container.appendChild(categoryEl);
-    lucide.createIcons(); // Initialize Lucide icons after injecting HTML
 });
 
-// Initialize Lucide icons
 lucide.createIcons();

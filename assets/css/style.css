@@ -57,13 +57,11 @@ font-family: 'Open Sans', sans-serif;
     --mb-4: 2rem;
     --mb-5: 2.5rem;
     --mb-6: 3rem;
-    --mb-7: 4rem;
 }
 
 /*===== z index =====*/
 :root {
     --z-back: 0;
-    --z-normal: 1;
     --z-front: 10;
 }
 
@@ -163,7 +161,7 @@ span {
 ================================================== */
 header {
     background-color: var(--secondary-background-color); 
-    padding: var(--mb-0-4);
+    padding: var(--mb-0-5);
     position: fixed;
     width: 100%;
     top: 0;
@@ -416,11 +414,6 @@ header {
     line-height: 1.8;
 }
 
-.interests-heading {
-    color: var(--accent-color);
-    margin: var(--mb-2) auto var(--mb-3) auto;
-}
-
 .interest-card {
     /* background: linear-gradient(145deg, #1a1a1a, #0d0d0d); */
     background-color: var(--secondary-background-color);
@@ -476,7 +469,7 @@ header {
 
 .interest-description {
     color: var(--foreground-color);
-    font-size: var(--mb-2);
+    font-size: var(--h3-font-size);
 }
 
 /* Timeline Section
@@ -603,16 +596,6 @@ header {
     line-height: 1.6;
 }
 
-.timeline-body-heading {
-    text-align: center;
-    color: var(--accent-color);
-    font-family: var(--heading-font);
-    font-size: var(--big-font-size);
-    padding: var(--mb-5) 0 var(--mb-4) 0;
-    margin-top: clamp(1rem, 3vw, 2rem);
-}
-
-
 @media screen and (max-width: 768px) {
     .timeline::after {
         left: 31px;
@@ -645,15 +628,6 @@ header {
     max-width: 1200px;
     margin: 0 auto;
     padding: 0 var(--mb-4) var(--mb-6) var(--mb-4);
-}
-
-.skills-heading {
-    text-align: center;
-    color: var(--accent-color);
-    font-size: var(--big-font-size);
-    font-family: var(--heading-font);
-    /* margin-top: clamp(1rem, 3vw, 2rem); */
-    padding: 0 0 var(--mb-4) 0;
 }
 
 .skills-container {
@@ -728,13 +702,14 @@ header {
 }
 
 .category-icon {
-    background: var(--secondary_background-color);
+    background: var(--secondary-background-color);
     padding: clamp(0.5rem, 1.5vw, 0.8rem);
     border-radius: 12px;
     display: flex;
     align-items: center;
     justify-content: center;
     box-shadow: 0 0 15px var(--glow-color);
+    animation: glow 2s infinite;
 }
 
 .category-icon svg {
@@ -779,7 +754,7 @@ header {
     transform: scale(1.05);
     background: linear-gradient(145deg, #3a3a3a, #2d2d2d);
     box-shadow: 0 5px 15px var(--glow-color);
-    border-color: var(--primary-color);
+    border-color: var(--accent-color);
 }
 
 .skill-icon {
@@ -809,10 +784,6 @@ header {
     0% { box-shadow: 0 0 5px var(--glow-color); }
     50% { box-shadow: 0 0 20px var(--glow-color); }
     100% { box-shadow: 0 0 5px var(--glow-color); }
-}
-
-.category-icon {
-    animation: glow 2s infinite;
 }
 
 /*Projects Section
