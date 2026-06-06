@@ -26,6 +26,9 @@ yarn-error.log*
 # Misc
 *.log
 
+# Claude Code guidance file (local only)
+CLAUDE.md
+
 
 test.md
 /research_files
