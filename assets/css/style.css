@@ -947,6 +947,17 @@ header {
     transform: scale(1.2);
 }
 
+/* Blogs listing page layout */
+body.blogs-page {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+body.blogs-page > main {
+    flex: 1;
+}
+
 /* Theme Switcher / Color Picker
 ================================================== */
 .color-picker-dropdown {
